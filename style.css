@@ -152,10 +152,10 @@ nav ul li a:hover{
     color: #ffffff;
 }
 
-.gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 40px;
+.gallery-flex {
+    display: flex;
+    align-items: center;
+    gap: 60px;
     margin-top: 40px;
 }
 
@@ -238,6 +238,8 @@ button:hover {
 
 .contact-form button {
     width: 100%;
+    border: 1px solid white;
+    transform: none !important;
 }
 
 footer {
@@ -253,8 +255,11 @@ footer {
 }
 
 @media (max-width: 768px) {
+    header{
+        height: 900px;
+    }
     nav ul {
-        flex-direction: column;
+        overflow: scroll;
         align-items: center;
     }
     
@@ -262,7 +267,7 @@ footer {
         flex-direction: column;
     }
     
-    .download-options, .features-grid, .gallery-grid {
-        grid-template-columns: 1fr;
+     .gallery-flex {
+        flex-direction: column;
     }
 }
